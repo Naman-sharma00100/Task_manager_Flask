@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<main class="form-signin w-100 m-auto">
+    <form action="/update/{{user.taskId}}" method="POST">
+      <img class="mb-4" src="./assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+      <h1 class="h3 mb-3 fw-normal">Update Task</h1>
+
+      <div class="form-floating">
+        <input type="text" value="{{user.TaskName}}" name="TaskName" class="form-control" id="floatingInput">
+        <label for="floatingInput">TaskName</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" name="desc" value="{{user.Desc}}" class="form-control" id="floatingPassword">
+        <label for="floatingPassword">Description</label>
+      </div>
+      <button class="btn btn-primary w-100 py-2" type="submit">Update</button>
+    </form>
+
+
+
+
+
+{% endblock body %}
